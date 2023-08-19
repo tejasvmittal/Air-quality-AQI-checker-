@@ -1,0 +1,35 @@
+Latitude: Is the north to south line (the angle that the line from a place to the center makes with the equator)
+	Max values: 90 degrees(represents N or S pole)
+	Min value: 0 degree(The location is on the equator)
+
+Longitude: Is the east to west line.
+	Max values: 180 degrees(to the E or W direction)
+	MIn values: 0(Means 0 degree from E and W direction)
+
+Geocoding:
+Forward geocoding- Taking description of a location and turning it into coordinates.
+Reverse geocoding- Taking coordinates and turning it into a description.
+
+Selecting sensors:
+Each sensor should have values in pm, age, type, Lat, Lon.
+pm(ug/m^3)(2nd element)
+age(seconds)(5th element)- should not exceed 1 hour
+Type(0/1)(26th element)- only consider 0 means outdoor
+Lat(28th element)
+Lon(29th element)
+
+Nominatim API:
+search- (https://nominatim.openstreetmap.org/search?<params>), format=json
+reverse- (https://nominatim.openstreetmap.org/reverse?lat=<value>&lon=<value>&<params>), format=json
+
+
+
+
+
+testing data: [
+[53,0.0,0.0,0.0,0,0.0,0.0,0.1,0.7,12.1,8.3,4.4,97,0.0,0.0,846.1,56.0,0.7,0.0,0.0,0.0,'null','null','null','null',0,"Lakeshore",40.246742,-111.7048,0,0,0,'null','null',0.0,1],
+[77,20.6,20.6,20.6,0,20.6,20.8,20.0,19.4,18.1,24.5,29.5,97,20.0,21.2,9117.8,960.9,12.3,0.7,0.4,0.2,'null','null','null','null',0,"Sunnyside",40.750816,-111.82529,0,0,0,'null','null',0.01,1],
+[135,1.4,1.4,1.4,0,1.4,1.1,0.9,0.8,0.8,2.3,4.1,97,1.1,1.4,1674.2,107.2,3.7,0.5,0.0,0.0,55,33,653.62,'null',0,"Octopod",41.223026,-111.9438,0,0,0,'null','null',0.05,1],
+[179,1.5,1.5,1.5,1,1.5,1.8,2.6,3.8,6.7,9.6,10.2,90,1.3,1.6,428.7,112.1,6.8,0.1,0.1,0.0,59,45,1020.74,65,0,"Ross Way, Gabriola Island, British Columbia",49.174496,-123.84784,0,0,0,'null','null',0.01,3],
+[182,2.0,2.0,2.0,0,2.0,1.5,1.6,1.4,1.7,4.5,7.5,100,1.1,2.4,1277.5,114.2,8.7,0.6,0.2,0.0,56,43,1025.05,'null',0,"Jolly Brothers Road, Gabriola Island BC P1",49.160076,-123.74227,0,0,0,'null','null',0.0,3],
+[195,11.0,11.0,11.0,0,11.0,17.8,17.1,12.5,5.4,4.5,4.4,100,8.1,12.5,1701.7,368.0,44.2,3.2,0.8,0.1,48,58,1018.26,85,0,"Trinidad ",41.059723,-124.12889,0,0,0,'null','null',0.0,3]]
